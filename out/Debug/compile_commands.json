@@ -1,0 +1,52 @@
+[
+{
+  "directory": "/home/hat082/cpp_projects/pid_improved/out/Debug",
+  "command": "/usr/bin/c++  -I/home/hat082/cpp_projects/pid_improved/include -isystem /usr/local/include/opencv4 -g -std=gnu++11 -o CMakeFiles/RobotControl.dir/src/Camera.cpp.o -c /home/hat082/cpp_projects/pid_improved/src/Camera.cpp",
+  "file": "/home/hat082/cpp_projects/pid_improved/src/Camera.cpp"
+},
+{
+  "directory": "/home/hat082/cpp_projects/pid_improved/out/Debug",
+  "command": "/usr/bin/c++  -I/home/hat082/cpp_projects/pid_improved/include -isystem /usr/local/include/opencv4 -g -std=gnu++11 -o CMakeFiles/RobotControl.dir/src/GPIO.cpp.o -c /home/hat082/cpp_projects/pid_improved/src/GPIO.cpp",
+  "file": "/home/hat082/cpp_projects/pid_improved/src/GPIO.cpp"
+},
+{
+  "directory": "/home/hat082/cpp_projects/pid_improved/out/Debug",
+  "command": "/usr/bin/c++  -I/home/hat082/cpp_projects/pid_improved/include -isystem /usr/local/include/opencv4 -g -std=gnu++11 -o CMakeFiles/RobotControl.dir/src/ImageProcessor.cpp.o -c /home/hat082/cpp_projects/pid_improved/src/ImageProcessor.cpp",
+  "file": "/home/hat082/cpp_projects/pid_improved/src/ImageProcessor.cpp"
+},
+{
+  "directory": "/home/hat082/cpp_projects/pid_improved/out/Debug",
+  "command": "/usr/bin/c++  -I/home/hat082/cpp_projects/pid_improved/include -isystem /usr/local/include/opencv4 -g -std=gnu++11 -o CMakeFiles/RobotControl.dir/src/PIDController.cpp.o -c /home/hat082/cpp_projects/pid_improved/src/PIDController.cpp",
+  "file": "/home/hat082/cpp_projects/pid_improved/src/PIDController.cpp"
+},
+{
+  "directory": "/home/hat082/cpp_projects/pid_improved/out/Debug",
+  "command": "/usr/bin/c++  -I/home/hat082/cpp_projects/pid_improved/include -isystem /usr/local/include/opencv4 -g -std=gnu++11 -o CMakeFiles/RobotControl.dir/src/RobotSystem.cpp.o -c /home/hat082/cpp_projects/pid_improved/src/RobotSystem.cpp",
+  "file": "/home/hat082/cpp_projects/pid_improved/src/RobotSystem.cpp"
+},
+{
+  "directory": "/home/hat082/cpp_projects/pid_improved/out/Debug",
+  "command": "/usr/bin/c++  -I/home/hat082/cpp_projects/pid_improved/include -isystem /usr/local/include/opencv4 -g -std=gnu++11 -o CMakeFiles/RobotControl.dir/src/SerialCommunicator.cpp.o -c /home/hat082/cpp_projects/pid_improved/src/SerialCommunicator.cpp",
+  "file": "/home/hat082/cpp_projects/pid_improved/src/SerialCommunicator.cpp"
+},
+{
+  "directory": "/home/hat082/cpp_projects/pid_improved/out/Debug",
+  "command": "/usr/bin/c++  -I/home/hat082/cpp_projects/pid_improved/include -isystem /usr/local/include/opencv4 -g -std=gnu++11 -o CMakeFiles/RobotControl.dir/src/TaskExecutor.cpp.o -c /home/hat082/cpp_projects/pid_improved/src/TaskExecutor.cpp",
+  "file": "/home/hat082/cpp_projects/pid_improved/src/TaskExecutor.cpp"
+},
+{
+  "directory": "/home/hat082/cpp_projects/pid_improved/out/Debug",
+  "command": "/usr/bin/c++  -I/home/hat082/cpp_projects/pid_improved/include -isystem /usr/local/include/opencv4 -g -std=gnu++11 -o CMakeFiles/RobotControl.dir/src/TemplateMatcher.cpp.o -c /home/hat082/cpp_projects/pid_improved/src/TemplateMatcher.cpp",
+  "file": "/home/hat082/cpp_projects/pid_improved/src/TemplateMatcher.cpp"
+},
+{
+  "directory": "/home/hat082/cpp_projects/pid_improved/out/Debug",
+  "command": "/usr/bin/c++  -I/home/hat082/cpp_projects/pid_improved/include -isystem /usr/local/include/opencv4 -g -std=gnu++11 -o CMakeFiles/RobotControl.dir/src/UltrasonicSensor.cpp.o -c /home/hat082/cpp_projects/pid_improved/src/UltrasonicSensor.cpp",
+  "file": "/home/hat082/cpp_projects/pid_improved/src/UltrasonicSensor.cpp"
+},
+{
+  "directory": "/home/hat082/cpp_projects/pid_improved/out/Debug",
+  "command": "/usr/bin/c++  -I/home/hat082/cpp_projects/pid_improved/include -isystem /usr/local/include/opencv4 -g -std=gnu++11 -o CMakeFiles/RobotControl.dir/src/main.cpp.o -c /home/hat082/cpp_projects/pid_improved/src/main.cpp",
+  "file": "/home/hat082/cpp_projects/pid_improved/src/main.cpp"
+}
+]
