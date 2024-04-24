@@ -1,11 +1,11 @@
+#include "Camera.h"
 #include <RobotSystem.h>
 #include <iostream>
-#include <system_error>
 
 // Assuming the existence of a constructor for each of the class members
 // that properly initializes them.
 
-bool Robot::initialize() {
+// bool Robot::init() {
   // Initialize all the components of the robot system
   // Return true if initialization is successful, false otherwise
   // This is a stub, so let's assume it always succeeds for now
@@ -18,8 +18,8 @@ bool Robot::initialize() {
   // templateMatcher_.initialize();
   // ultrasonicSensor_.initialize();
 
-  return true;
-}
+//   return true;
+// }
 
 bool Robot::existPink() {
   // Implement the logic to check if pink is detected by the camera
@@ -28,6 +28,12 @@ bool Robot::existPink() {
   std::cout << "Pink Detected\n";
   return true;
 }
+
+void Robot::takeImage() {
+  // Implement the logic to take an image from the camera
+  // This is a stub, so it does nothing for now
+  return;
+};
 
 void Robot::moveCamera(int angle) {
   // Implement the logic to move the camera to the specified angle
@@ -51,12 +57,6 @@ void Robot::blinkLED() {
   return;
 }
 
-void Robot::moveForward() {
-  // Implement the logic to make the robot move forward
-  // This is a stub, so it does nothing for now
-  return;
-}
-
 void Robot::performTask() {
   std::cout << "Performing task: " << task_ << std::endl;
   switch (task_) {
@@ -72,9 +72,14 @@ void Robot::performTask() {
 void Robot::pidControl() { return; }
 
 // Constructor implementation
-Robot::Robot() {
+Robot::Robot(int cameraResolution) : camera_(cameraResolution) {
+  // Additional initialization for Robot if needed
+
+  // Initialize all the class members here
+  std::cout << "Camera resolution: " << cameraResolution << std::endl;
+
   task_ = NONE;
-  std::cout << "Constructor called" << std::endl;
+  std::cout << "Initialization complete. Press [Enter] to continue" << std::endl;
 }
 
 // Destructor implementation

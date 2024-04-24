@@ -1,21 +1,19 @@
 #include "RobotSystem.h"
-#include <iostream>
+#include <cstdio>
 #include <wiringPi.h>
 
 int main() {
-
   // initialize robot
-  Robot robot;
+  Robot robot(1920);
 
-  if (!robot.initialize()) {
-    std::cerr << "Failed to initialize the robot system." << std::endl;
-    return -1;
-  }
+  while (getchar() != '\n')
+    ;
 
   // main execution loop
   while (true) {
     delay(1000);
     // take image data
+    robot.takeImage();
     // check if there existsPink
     // if yes,
     if (robot.existPink()) {
