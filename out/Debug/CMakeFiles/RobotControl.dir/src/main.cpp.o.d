@@ -2,9 +2,8 @@ CMakeFiles/RobotControl.dir/src/main.cpp.o: \
  /home/hat082/cpp_projects/pid_improved/src/main.cpp \
  /usr/include/stdc-predef.h \
  /home/hat082/cpp_projects/pid_improved/include/RobotSystem.h \
- /usr/local/include/opencv4/opencv2/opencv.hpp \
- /usr/local/include/opencv4/opencv2/opencv_modules.hpp \
- /usr/local/include/opencv4/opencv2/core.hpp \
+ /usr/local/include/opencv4/opencv2/core/mat.hpp \
+ /usr/local/include/opencv4/opencv2/core/matx.hpp \
  /usr/local/include/opencv4/opencv2/core/cvdef.h \
  /usr/local/include/opencv4/opencv2/core/version.hpp \
  /usr/include/c++/11/limits \
@@ -66,6 +65,7 @@ CMakeFiles/RobotControl.dir/src/main.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
  /usr/include/c++/11/bits/std_abs.h \
  /usr/local/include/opencv4/opencv2/core/base.hpp \
+ /usr/local/include/opencv4/opencv2/opencv_modules.hpp \
  /usr/include/c++/11/climits \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/limits.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/syslimits.h \
@@ -191,7 +191,6 @@ CMakeFiles/RobotControl.dir/src/main.cpp.o: \
  /usr/local/include/opencv4/opencv2/core/vsx_utils.hpp \
  /usr/include/assert.h /usr/local/include/opencv4/opencv2/core/check.hpp \
  /usr/local/include/opencv4/opencv2/core/traits.hpp \
- /usr/local/include/opencv4/opencv2/core/matx.hpp \
  /usr/local/include/opencv4/opencv2/core/saturate.hpp \
  /usr/local/include/opencv4/opencv2/core/fast_math.hpp \
  /usr/local/include/opencv4/opencv2/core/types.hpp \
@@ -200,9 +199,10 @@ CMakeFiles/RobotControl.dir/src/main.cpp.o: \
  /usr/include/c++/11/vector /usr/include/c++/11/bits/stl_vector.h \
  /usr/include/c++/11/bits/stl_bvector.h \
  /usr/include/c++/11/bits/vector.tcc \
- /usr/local/include/opencv4/opencv2/core/mat.hpp \
  /usr/local/include/opencv4/opencv2/core/bufferpool.hpp \
  /usr/local/include/opencv4/opencv2/core/mat.inl.hpp \
+ /usr/local/include/opencv4/opencv2/opencv.hpp \
+ /usr/local/include/opencv4/opencv2/core.hpp \
  /usr/local/include/opencv4/opencv2/core/persistence.hpp \
  /usr/local/include/opencv4/opencv2/core/operations.hpp \
  /usr/local/include/opencv4/opencv2/core/cvstd.inl.hpp \

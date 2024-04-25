@@ -233,8 +233,7 @@
 				15,
 				16,
 				17,
-				18,
-				19
+				18
 			]
 		}
 	],
@@ -318,11 +317,6 @@
 		{
 			"backtrace" : 1,
 			"path" : "include/PIDController.h",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"path" : "include/Robot.h",
 			"sourceGroupIndex" : 1
 		},
 		{

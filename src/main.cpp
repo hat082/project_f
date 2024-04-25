@@ -2,16 +2,21 @@
 #include <cstdio>
 #include <wiringPi.h>
 
+using Color = ImageProcessor::Color;
+
 int main() {
   // initialize robot
-  Robot robot(1920);
+  Robot robot;
 
-  while (getchar() != '\n')
-    ;
+ char c;
+  while (c != '\n') {
+    if (c == 'q')
+      return 0;
+    c = getchar();
+  }
 
   // main execution loop
   while (true) {
-    delay(1000);
     // take image data
     robot.takeImage();
     // check if there existsPink
@@ -23,7 +28,7 @@ int main() {
       robot.performTask();
     } else {
       // pid
-      robot.pidControl();
+      robot.pidControl(Color::BLACK);
     }
   }
   return 0;

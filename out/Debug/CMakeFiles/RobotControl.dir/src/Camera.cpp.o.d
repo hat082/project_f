@@ -340,4 +340,5 @@ CMakeFiles/RobotControl.dir/src/Camera.cpp.o: \
  /usr/local/include/opencv4/opencv2/stitching/detail/camera.hpp \
  /usr/local/include/opencv4/opencv2/video.hpp \
  /usr/local/include/opencv4/opencv2/video/tracking.hpp \
- /usr/local/include/opencv4/opencv2/video/background_segm.hpp
+ /usr/local/include/opencv4/opencv2/video/background_segm.hpp \
+ /usr/include/softPwm.h /usr/include/wiringPi.h
