@@ -3,7 +3,7 @@
 #include <softPwm.h>
 #include <wiringPi.h>
 
-Camera::Camera() : yRatio_(1), heightRatio_(1), servoPin_(25), cameraPos_(90){
+Camera::Camera() : yRatio_(1), heightRatio_(1), servoPin_(25), cameraPos_(90) {
   // Initialization code with resolution parameter
   // Open the default camera
   if (!cap_.open(0)) {
@@ -11,6 +11,13 @@ Camera::Camera() : yRatio_(1), heightRatio_(1), servoPin_(25), cameraPos_(90){
     std::cerr << "ERROR: Could not open camera" << std::endl;
     // You may want to throw an exception or handle the error as per your
     // application's needs
+  }
+}
+
+// Destructor to release the camera
+Camera::~Camera() {
+  if (cap_.isOpened()) {
+    cap_.release();
   }
 }
 
@@ -45,9 +52,62 @@ void Camera::moveCamera(int angle) {
   softPwmWrite(servoPin_, 0);
 }
 
-// Destructor to release the camera
-Camera::~Camera() {
-  if (cap_.isOpened()) {
-    cap_.release();
+int capture_15_secs() {
+  // Define the video capture object
+  cv::VideoCapture cap(0);
+
+  // Check if the camera is opened successfully
+  if (!cap.isOpened()) {
+    std::cerr << "Error: Camera could not be opened." << std::endl;
+    return -1;
   }
+
+  // Define the codec and create VideoWriter object
+  cv::VideoWriter video;
+  std::string videoFile = "output.avi"; // Name of the output video file
+  int frameWidth = cap.get(cv::CAP_PROP_FRAME_WIDTH);
+  int frameHeight = cap.get(cv::CAP_PROP_FRAME_HEIGHT);
+  double fps = cap.get(cv::CAP_PROP_FPS);
+
+  // These parameters can be adjusted to control the video size and quality
+  int fourcc = cv::VideoWriter::fourcc('M', 'J', 'P', 'G');
+  video.open(videoFile, fourcc, fps, cv::Size(frameWidth, frameHeight), true);
+
+  if (!video.isOpened()) {
+    std::cerr << "Error: Could not open the video writer." << std::endl;
+    return -1;
+  }
+
+  // Record for 10-15 seconds
+  int64_t startTick = cv::getTickCount();
+  double timeElapsed;
+  const int64_t timeLimitTick =
+      cv::getTickFrequency() * 10; // 10 seconds in ticks
+
+  cv::Mat frame;
+  while (true) {
+    // Capture frame-by-frame
+    if (!cap.read(frame)) {
+      std::cerr << "Error: Could not read a frame from camera." << std::endl;
+      break;
+    }
+
+    // Write the frame to the video file
+    video.write(frame);
+
+    // Calculate time taken
+    timeElapsed = (cv::getTickCount() - startTick) / cv::getTickFrequency();
+    if (timeElapsed >= 15) { // Stop after 10 seconds
+      break;
+    }
+  }
+
+  // Release the video capture and writer objects
+  cap.release();
+  video.release();
+
+  std::cout << "Video recorded and saved as " << videoFile << std::endl;
+
+  return 0;
 }
+

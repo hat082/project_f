@@ -812,9 +812,10 @@ CMakeFiles/RobotControl.dir/src/PIDController.cpp.o: ../../src/PIDController.cpp
 
 CMakeFiles/RobotControl.dir/src/RobotSystem.cpp.o: ../../src/RobotSystem.cpp \
   /usr/include/stdc-predef.h \
-  ../../include/RobotSystem.h \
-  /usr/local/include/opencv4/opencv2/core/mat.hpp \
-  /usr/local/include/opencv4/opencv2/core/matx.hpp \
+  ../../include/Camera.h \
+  /usr/local/include/opencv4/opencv2/opencv.hpp \
+  /usr/local/include/opencv4/opencv2/opencv_modules.hpp \
+  /usr/local/include/opencv4/opencv2/core.hpp \
   /usr/local/include/opencv4/opencv2/core/cvdef.h \
   /usr/local/include/opencv4/opencv2/core/version.hpp \
   /usr/include/c++/11/limits \
@@ -882,7 +883,6 @@ CMakeFiles/RobotControl.dir/src/RobotSystem.cpp.o: ../../src/RobotSystem.cpp \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/include/c++/11/bits/std_abs.h \
   /usr/local/include/opencv4/opencv2/core/base.hpp \
-  /usr/local/include/opencv4/opencv2/opencv_modules.hpp \
   /usr/include/c++/11/climits \
   /usr/lib/gcc/x86_64-linux-gnu/11/include/limits.h \
   /usr/lib/gcc/x86_64-linux-gnu/11/include/syslimits.h \
@@ -1038,6 +1038,7 @@ CMakeFiles/RobotControl.dir/src/RobotSystem.cpp.o: ../../src/RobotSystem.cpp \
   /usr/include/assert.h \
   /usr/local/include/opencv4/opencv2/core/check.hpp \
   /usr/local/include/opencv4/opencv2/core/traits.hpp \
+  /usr/local/include/opencv4/opencv2/core/matx.hpp \
   /usr/local/include/opencv4/opencv2/core/saturate.hpp \
   /usr/local/include/opencv4/opencv2/core/fast_math.hpp \
   /usr/local/include/opencv4/opencv2/core/types.hpp \
@@ -1047,10 +1048,9 @@ CMakeFiles/RobotControl.dir/src/RobotSystem.cpp.o: ../../src/RobotSystem.cpp \
   /usr/include/c++/11/bits/stl_vector.h \
   /usr/include/c++/11/bits/stl_bvector.h \
   /usr/include/c++/11/bits/vector.tcc \
+  /usr/local/include/opencv4/opencv2/core/mat.hpp \
   /usr/local/include/opencv4/opencv2/core/bufferpool.hpp \
   /usr/local/include/opencv4/opencv2/core/mat.inl.hpp \
-  /usr/local/include/opencv4/opencv2/opencv.hpp \
-  /usr/local/include/opencv4/opencv2/core.hpp \
   /usr/local/include/opencv4/opencv2/core/persistence.hpp \
   /usr/local/include/opencv4/opencv2/core/operations.hpp \
   /usr/local/include/opencv4/opencv2/core/cvstd.inl.hpp \
@@ -1208,7 +1208,7 @@ CMakeFiles/RobotControl.dir/src/RobotSystem.cpp.o: ../../src/RobotSystem.cpp \
   /usr/local/include/opencv4/opencv2/video.hpp \
   /usr/local/include/opencv4/opencv2/video/tracking.hpp \
   /usr/local/include/opencv4/opencv2/video/background_segm.hpp \
-  ../../include/Camera.h \
+  ../../include/RobotSystem.h \
   ../../include/GPIO.h \
   ../../include/ImageProcessor.h \
   ../../include/PIDController.h \
