@@ -1,115 +1,94 @@
-## CMake generated files
+# CMake build directory
+build/
 CMakeFiles/
-CMakeCache.txt
-cmake_install.cmake
-Makefile
-Makefile.cmake
-CMakeDirectoryInformation.cmake
-CMakeOutput.log
-CMakeTmp/
-progress.marks
+cmake-build-*
+out/
+bin/
+buildlog.txt
 
+# CCache files
+ccache/
 .cache/
 
-# Compiled binary files
-a.out
-
-# Compiled object files
-*.o
-*.obj
-
-# Compiled dependency files
-*.d
-
-# Compiled dependency files for CMake
-DependInfo.cmake
-
-# Compiled binary files from a build in a source directory
-*.exe
-*.exe~
-
-# Compiled binary files from a build in a source directory, on Windows
-*.dll
-*.dll~
-*.pdb
-*.manifest
-
-# Compiled binary files from a build in a source directory, on Mac
-*.dylib
-*.dylib~
-
-# Compiled binary files from a build in a source directory, on Mac with debug symbols
-*.dSYM
-
-# Compiled binary files from a build in a source directory, on Windows with debug symbols
-*.pdb
-
-# Other files that should not be tracked
-*.log
-*.tmp
-*.temp
-*.swp
-*.bak
-*.orig
-
-# JSON Compilation database
-compile_commands.json
-
-# Other hidden or backup files
-.*~ CMake generated files
-CMakeFiles/
+# CMake GUI arrangements
+CMakeLists.txt.user
+CMakeLists.txt.old
 CMakeCache.txt
 cmake_install.cmake
-Makefile
-Makefile.cmake
-CMakeDirectoryInformation.cmake
-CMakeOutput.log
-CMakeTmp/
-progress.marks
 
-# Compiled binary files
-a.out
+# Project files for other platforms
+*.xcodeproj
+*.xcworkspace
+
+# Byte-compiled files from Python
+__pycache__/
+*.pyc
 
 # Compiled object files
 *.o
-*.obj
-
-# Compiled dependency files
 *.d
 
-# Compiled dependency files for CMake
-DependInfo.cmake
-
-# Compiled binary files from a build in a source directory
+# Compiled binary files
 *.exe
-*.exe~
-
-# Compiled binary files from a build in a source directory, on Windows
 *.dll
-*.dll~
-*.pdb
-*.manifest
-
-# Compiled binary files from a build in a source directory, on Mac
+*.so
 *.dylib
-*.dylib~
 
-# Compiled binary files from a build in a source directory, on Mac with debug symbols
-*.dSYM
-
-# Compiled binary files from a build in a source directory, on Windows with debug symbols
-*.pdb
-
-# Other files that should not be tracked
-*.log
-*.tmp
-*.temp
+# Other files that should not be part of the repository
+*.user
+*.a
+*.lib
+*.ncb
+*.sdf
+*.sln
+*.vcxproj*
 *.swp
 *.bak
 *.orig
+*.rej
+*.log
+*.pdb
+*.idb
+*.ilk
+*.aps
+*.pch
+*.exp
+*.manifest
+*.tds
+*.tlog
+*.svclog
+*.pgc
+*.pgd
+*.bsc
+*.res
+*.tlb
+*.lic
+*.sbr
+*.pdbx
+*.vspscc
+*_i.c
+*_p.c
+*.i
+*.ii
+*.d.swp
+*.o.wasm
+*.wasm
+*.gcda
+*.gcno
+*.gcd
+*.gcov
+*.nmap
+*.map
 
-# JSON Compilation database
-compile_commands.json
+# Files specific to certain IDEs and editors
+*.kdev4
+*.kdevcore
+*.kdevs
+*.kdevse
+*.tags
 
-# Other hidden or backup files
-.*~
+# Version control system files
+.svn*
+.git*
+.hg*
+.bzr*
