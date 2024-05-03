@@ -97,10 +97,24 @@ CMakeFiles/RobotControl.dir/src/GPIO.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RobotControl.dir/src/GPIO.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hat082/cpp_projects/pid_improved/src/GPIO.cpp -o CMakeFiles/RobotControl.dir/src/GPIO.cpp.s
 
+CMakeFiles/RobotControl.dir/src/HMI.cpp.o: CMakeFiles/RobotControl.dir/flags.make
+CMakeFiles/RobotControl.dir/src/HMI.cpp.o: ../../src/HMI.cpp
+CMakeFiles/RobotControl.dir/src/HMI.cpp.o: CMakeFiles/RobotControl.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hat082/cpp_projects/pid_improved/out/Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/RobotControl.dir/src/HMI.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/RobotControl.dir/src/HMI.cpp.o -MF CMakeFiles/RobotControl.dir/src/HMI.cpp.o.d -o CMakeFiles/RobotControl.dir/src/HMI.cpp.o -c /home/hat082/cpp_projects/pid_improved/src/HMI.cpp
+
+CMakeFiles/RobotControl.dir/src/HMI.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/RobotControl.dir/src/HMI.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/hat082/cpp_projects/pid_improved/src/HMI.cpp > CMakeFiles/RobotControl.dir/src/HMI.cpp.i
+
+CMakeFiles/RobotControl.dir/src/HMI.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RobotControl.dir/src/HMI.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hat082/cpp_projects/pid_improved/src/HMI.cpp -o CMakeFiles/RobotControl.dir/src/HMI.cpp.s
+
 CMakeFiles/RobotControl.dir/src/ImageProcessor.cpp.o: CMakeFiles/RobotControl.dir/flags.make
 CMakeFiles/RobotControl.dir/src/ImageProcessor.cpp.o: ../../src/ImageProcessor.cpp
 CMakeFiles/RobotControl.dir/src/ImageProcessor.cpp.o: CMakeFiles/RobotControl.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hat082/cpp_projects/pid_improved/out/Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/RobotControl.dir/src/ImageProcessor.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hat082/cpp_projects/pid_improved/out/Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/RobotControl.dir/src/ImageProcessor.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/RobotControl.dir/src/ImageProcessor.cpp.o -MF CMakeFiles/RobotControl.dir/src/ImageProcessor.cpp.o.d -o CMakeFiles/RobotControl.dir/src/ImageProcessor.cpp.o -c /home/hat082/cpp_projects/pid_improved/src/ImageProcessor.cpp
 
 CMakeFiles/RobotControl.dir/src/ImageProcessor.cpp.i: cmake_force
@@ -114,7 +128,7 @@ CMakeFiles/RobotControl.dir/src/ImageProcessor.cpp.s: cmake_force
 CMakeFiles/RobotControl.dir/src/PIDController.cpp.o: CMakeFiles/RobotControl.dir/flags.make
 CMakeFiles/RobotControl.dir/src/PIDController.cpp.o: ../../src/PIDController.cpp
 CMakeFiles/RobotControl.dir/src/PIDController.cpp.o: CMakeFiles/RobotControl.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hat082/cpp_projects/pid_improved/out/Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/RobotControl.dir/src/PIDController.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hat082/cpp_projects/pid_improved/out/Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/RobotControl.dir/src/PIDController.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/RobotControl.dir/src/PIDController.cpp.o -MF CMakeFiles/RobotControl.dir/src/PIDController.cpp.o.d -o CMakeFiles/RobotControl.dir/src/PIDController.cpp.o -c /home/hat082/cpp_projects/pid_improved/src/PIDController.cpp
 
 CMakeFiles/RobotControl.dir/src/PIDController.cpp.i: cmake_force
@@ -128,7 +142,7 @@ CMakeFiles/RobotControl.dir/src/PIDController.cpp.s: cmake_force
 CMakeFiles/RobotControl.dir/src/RobotSystem.cpp.o: CMakeFiles/RobotControl.dir/flags.make
 CMakeFiles/RobotControl.dir/src/RobotSystem.cpp.o: ../../src/RobotSystem.cpp
 CMakeFiles/RobotControl.dir/src/RobotSystem.cpp.o: CMakeFiles/RobotControl.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hat082/cpp_projects/pid_improved/out/Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/RobotControl.dir/src/RobotSystem.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hat082/cpp_projects/pid_improved/out/Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/RobotControl.dir/src/RobotSystem.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/RobotControl.dir/src/RobotSystem.cpp.o -MF CMakeFiles/RobotControl.dir/src/RobotSystem.cpp.o.d -o CMakeFiles/RobotControl.dir/src/RobotSystem.cpp.o -c /home/hat082/cpp_projects/pid_improved/src/RobotSystem.cpp
 
 CMakeFiles/RobotControl.dir/src/RobotSystem.cpp.i: cmake_force
@@ -142,7 +156,7 @@ CMakeFiles/RobotControl.dir/src/RobotSystem.cpp.s: cmake_force
 CMakeFiles/RobotControl.dir/src/SerialCommunicator.cpp.o: CMakeFiles/RobotControl.dir/flags.make
 CMakeFiles/RobotControl.dir/src/SerialCommunicator.cpp.o: ../../src/SerialCommunicator.cpp
 CMakeFiles/RobotControl.dir/src/SerialCommunicator.cpp.o: CMakeFiles/RobotControl.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hat082/cpp_projects/pid_improved/out/Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/RobotControl.dir/src/SerialCommunicator.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hat082/cpp_projects/pid_improved/out/Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/RobotControl.dir/src/SerialCommunicator.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/RobotControl.dir/src/SerialCommunicator.cpp.o -MF CMakeFiles/RobotControl.dir/src/SerialCommunicator.cpp.o.d -o CMakeFiles/RobotControl.dir/src/SerialCommunicator.cpp.o -c /home/hat082/cpp_projects/pid_improved/src/SerialCommunicator.cpp
 
 CMakeFiles/RobotControl.dir/src/SerialCommunicator.cpp.i: cmake_force
@@ -156,7 +170,7 @@ CMakeFiles/RobotControl.dir/src/SerialCommunicator.cpp.s: cmake_force
 CMakeFiles/RobotControl.dir/src/TaskExecutor.cpp.o: CMakeFiles/RobotControl.dir/flags.make
 CMakeFiles/RobotControl.dir/src/TaskExecutor.cpp.o: ../../src/TaskExecutor.cpp
 CMakeFiles/RobotControl.dir/src/TaskExecutor.cpp.o: CMakeFiles/RobotControl.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hat082/cpp_projects/pid_improved/out/Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/RobotControl.dir/src/TaskExecutor.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hat082/cpp_projects/pid_improved/out/Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/RobotControl.dir/src/TaskExecutor.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/RobotControl.dir/src/TaskExecutor.cpp.o -MF CMakeFiles/RobotControl.dir/src/TaskExecutor.cpp.o.d -o CMakeFiles/RobotControl.dir/src/TaskExecutor.cpp.o -c /home/hat082/cpp_projects/pid_improved/src/TaskExecutor.cpp
 
 CMakeFiles/RobotControl.dir/src/TaskExecutor.cpp.i: cmake_force
@@ -170,7 +184,7 @@ CMakeFiles/RobotControl.dir/src/TaskExecutor.cpp.s: cmake_force
 CMakeFiles/RobotControl.dir/src/TemplateMatcher.cpp.o: CMakeFiles/RobotControl.dir/flags.make
 CMakeFiles/RobotControl.dir/src/TemplateMatcher.cpp.o: ../../src/TemplateMatcher.cpp
 CMakeFiles/RobotControl.dir/src/TemplateMatcher.cpp.o: CMakeFiles/RobotControl.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hat082/cpp_projects/pid_improved/out/Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/RobotControl.dir/src/TemplateMatcher.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hat082/cpp_projects/pid_improved/out/Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/RobotControl.dir/src/TemplateMatcher.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/RobotControl.dir/src/TemplateMatcher.cpp.o -MF CMakeFiles/RobotControl.dir/src/TemplateMatcher.cpp.o.d -o CMakeFiles/RobotControl.dir/src/TemplateMatcher.cpp.o -c /home/hat082/cpp_projects/pid_improved/src/TemplateMatcher.cpp
 
 CMakeFiles/RobotControl.dir/src/TemplateMatcher.cpp.i: cmake_force
@@ -184,7 +198,7 @@ CMakeFiles/RobotControl.dir/src/TemplateMatcher.cpp.s: cmake_force
 CMakeFiles/RobotControl.dir/src/UltrasonicSensor.cpp.o: CMakeFiles/RobotControl.dir/flags.make
 CMakeFiles/RobotControl.dir/src/UltrasonicSensor.cpp.o: ../../src/UltrasonicSensor.cpp
 CMakeFiles/RobotControl.dir/src/UltrasonicSensor.cpp.o: CMakeFiles/RobotControl.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hat082/cpp_projects/pid_improved/out/Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/RobotControl.dir/src/UltrasonicSensor.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hat082/cpp_projects/pid_improved/out/Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/RobotControl.dir/src/UltrasonicSensor.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/RobotControl.dir/src/UltrasonicSensor.cpp.o -MF CMakeFiles/RobotControl.dir/src/UltrasonicSensor.cpp.o.d -o CMakeFiles/RobotControl.dir/src/UltrasonicSensor.cpp.o -c /home/hat082/cpp_projects/pid_improved/src/UltrasonicSensor.cpp
 
 CMakeFiles/RobotControl.dir/src/UltrasonicSensor.cpp.i: cmake_force
@@ -198,7 +212,7 @@ CMakeFiles/RobotControl.dir/src/UltrasonicSensor.cpp.s: cmake_force
 CMakeFiles/RobotControl.dir/src/main.cpp.o: CMakeFiles/RobotControl.dir/flags.make
 CMakeFiles/RobotControl.dir/src/main.cpp.o: ../../src/main.cpp
 CMakeFiles/RobotControl.dir/src/main.cpp.o: CMakeFiles/RobotControl.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hat082/cpp_projects/pid_improved/out/Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/RobotControl.dir/src/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hat082/cpp_projects/pid_improved/out/Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/RobotControl.dir/src/main.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/RobotControl.dir/src/main.cpp.o -MF CMakeFiles/RobotControl.dir/src/main.cpp.o.d -o CMakeFiles/RobotControl.dir/src/main.cpp.o -c /home/hat082/cpp_projects/pid_improved/src/main.cpp
 
 CMakeFiles/RobotControl.dir/src/main.cpp.i: cmake_force
@@ -213,6 +227,7 @@ CMakeFiles/RobotControl.dir/src/main.cpp.s: cmake_force
 RobotControl_OBJECTS = \
 "CMakeFiles/RobotControl.dir/src/Camera.cpp.o" \
 "CMakeFiles/RobotControl.dir/src/GPIO.cpp.o" \
+"CMakeFiles/RobotControl.dir/src/HMI.cpp.o" \
 "CMakeFiles/RobotControl.dir/src/ImageProcessor.cpp.o" \
 "CMakeFiles/RobotControl.dir/src/PIDController.cpp.o" \
 "CMakeFiles/RobotControl.dir/src/RobotSystem.cpp.o" \
@@ -227,6 +242,7 @@ RobotControl_EXTERNAL_OBJECTS =
 
 RobotControl: CMakeFiles/RobotControl.dir/src/Camera.cpp.o
 RobotControl: CMakeFiles/RobotControl.dir/src/GPIO.cpp.o
+RobotControl: CMakeFiles/RobotControl.dir/src/HMI.cpp.o
 RobotControl: CMakeFiles/RobotControl.dir/src/ImageProcessor.cpp.o
 RobotControl: CMakeFiles/RobotControl.dir/src/PIDController.cpp.o
 RobotControl: CMakeFiles/RobotControl.dir/src/RobotSystem.cpp.o
@@ -252,7 +268,7 @@ RobotControl: /usr/local/lib/libopencv_flann.so.4.9.0
 RobotControl: /usr/local/lib/libopencv_imgproc.so.4.9.0
 RobotControl: /usr/local/lib/libopencv_core.so.4.9.0
 RobotControl: CMakeFiles/RobotControl.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/hat082/cpp_projects/pid_improved/out/Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable RobotControl"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/hat082/cpp_projects/pid_improved/out/Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX executable RobotControl"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/RobotControl.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

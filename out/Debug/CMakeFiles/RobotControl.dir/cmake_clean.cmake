@@ -3,6 +3,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/RobotControl.dir/src/Camera.cpp.o.d"
   "CMakeFiles/RobotControl.dir/src/GPIO.cpp.o"
   "CMakeFiles/RobotControl.dir/src/GPIO.cpp.o.d"
+  "CMakeFiles/RobotControl.dir/src/HMI.cpp.o"
+  "CMakeFiles/RobotControl.dir/src/HMI.cpp.o.d"
   "CMakeFiles/RobotControl.dir/src/ImageProcessor.cpp.o"
   "CMakeFiles/RobotControl.dir/src/ImageProcessor.cpp.o.d"
   "CMakeFiles/RobotControl.dir/src/PIDController.cpp.o"

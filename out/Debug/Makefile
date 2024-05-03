@@ -177,6 +177,30 @@ src/GPIO.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/RobotControl.dir/build.make CMakeFiles/RobotControl.dir/src/GPIO.cpp.s
 .PHONY : src/GPIO.cpp.s
 
+src/HMI.o: src/HMI.cpp.o
+.PHONY : src/HMI.o
+
+# target to build an object file
+src/HMI.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RobotControl.dir/build.make CMakeFiles/RobotControl.dir/src/HMI.cpp.o
+.PHONY : src/HMI.cpp.o
+
+src/HMI.i: src/HMI.cpp.i
+.PHONY : src/HMI.i
+
+# target to preprocess a source file
+src/HMI.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RobotControl.dir/build.make CMakeFiles/RobotControl.dir/src/HMI.cpp.i
+.PHONY : src/HMI.cpp.i
+
+src/HMI.s: src/HMI.cpp.s
+.PHONY : src/HMI.s
+
+# target to generate assembly for a file
+src/HMI.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RobotControl.dir/build.make CMakeFiles/RobotControl.dir/src/HMI.cpp.s
+.PHONY : src/HMI.cpp.s
+
 src/ImageProcessor.o: src/ImageProcessor.cpp.o
 .PHONY : src/ImageProcessor.o
 
@@ -384,6 +408,9 @@ help:
 	@echo "... src/GPIO.o"
 	@echo "... src/GPIO.i"
 	@echo "... src/GPIO.s"
+	@echo "... src/HMI.o"
+	@echo "... src/HMI.i"
+	@echo "... src/HMI.s"
 	@echo "... src/ImageProcessor.o"
 	@echo "... src/ImageProcessor.i"
 	@echo "... src/ImageProcessor.s"

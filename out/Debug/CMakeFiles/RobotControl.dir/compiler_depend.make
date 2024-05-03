@@ -405,6 +405,44 @@ CMakeFiles/RobotControl.dir/src/Camera.cpp.o: ../../src/Camera.cpp \
 CMakeFiles/RobotControl.dir/src/GPIO.cpp.o: ../../src/GPIO.cpp \
   /usr/include/stdc-predef.h
 
+CMakeFiles/RobotControl.dir/src/HMI.cpp.o: ../../src/HMI.cpp \
+  /usr/include/stdc-predef.h \
+  ../../include/HMI.h \
+  /usr/include/lcd.h \
+  /usr/include/x86_64-linux-gnu/sys/time.h \
+  /usr/include/features.h \
+  /usr/include/features-time64.h \
+  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
+  /usr/include/x86_64-linux-gnu/bits/timesize.h \
+  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
+  /usr/include/x86_64-linux-gnu/bits/long-double.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
+  /usr/include/x86_64-linux-gnu/bits/types.h \
+  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
+  /usr/include/x86_64-linux-gnu/bits/time64.h \
+  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
+  /usr/include/x86_64-linux-gnu/sys/select.h \
+  /usr/include/x86_64-linux-gnu/bits/select.h \
+  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
+  /usr/include/x86_64-linux-gnu/bits/endian.h \
+  /usr/include/x86_64-linux-gnu/bits/endianness.h \
+  /usr/include/time.h \
+  /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h \
+  /usr/include/x86_64-linux-gnu/bits/time.h \
+  /usr/include/x86_64-linux-gnu/bits/timex.h \
+  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
+  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
+  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
+  /usr/include/wiringPi.h
+
 CMakeFiles/RobotControl.dir/src/ImageProcessor.cpp.o: ../../src/ImageProcessor.cpp \
   /usr/include/stdc-predef.h \
   ../../include/ImageProcessor.h \
@@ -1835,6 +1873,8 @@ CMakeFiles/RobotControl.dir/src/main.cpp.o: ../../src/main.cpp \
 
 ../../src/ImageProcessor.cpp:
 
+/usr/include/x86_64-linux-gnu/sys/time.h:
+
 ../../src/GPIO.cpp:
 
 /usr/include/wiringPi.h:
@@ -1848,6 +1888,8 @@ CMakeFiles/RobotControl.dir/src/main.cpp.o: ../../src/main.cpp \
 /usr/local/include/opencv4/opencv2/stitching/detail/blenders.hpp:
 
 /usr/local/include/opencv4/opencv2/stitching/detail/seam_finders.hpp:
+
+/usr/include/lcd.h:
 
 /usr/local/include/opencv4/opencv2/stitching/detail/camera.hpp:
 
@@ -2329,6 +2371,8 @@ CMakeFiles/RobotControl.dir/src/main.cpp.o: ../../src/main.cpp \
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/atomic_word.h:
 
+../../include/HMI.h:
+
 /usr/local/include/opencv4/opencv2/core/cv_cpu_dispatch.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/mmintrin.h:
@@ -2354,6 +2398,8 @@ CMakeFiles/RobotControl.dir/src/main.cpp.o: ../../src/main.cpp \
 /usr/include/x86_64-linux-gnu/bits/floatn.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h:
+
+../../src/HMI.cpp:
 
 /usr/include/x86_64-linux-gnu/bits/floatn-common.h:
 

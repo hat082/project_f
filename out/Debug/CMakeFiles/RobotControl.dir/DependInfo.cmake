@@ -10,6 +10,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/hat082/cpp_projects/pid_improved/src/Camera.cpp" "CMakeFiles/RobotControl.dir/src/Camera.cpp.o" "gcc" "CMakeFiles/RobotControl.dir/src/Camera.cpp.o.d"
   "/home/hat082/cpp_projects/pid_improved/src/GPIO.cpp" "CMakeFiles/RobotControl.dir/src/GPIO.cpp.o" "gcc" "CMakeFiles/RobotControl.dir/src/GPIO.cpp.o.d"
+  "/home/hat082/cpp_projects/pid_improved/src/HMI.cpp" "CMakeFiles/RobotControl.dir/src/HMI.cpp.o" "gcc" "CMakeFiles/RobotControl.dir/src/HMI.cpp.o.d"
   "/home/hat082/cpp_projects/pid_improved/src/ImageProcessor.cpp" "CMakeFiles/RobotControl.dir/src/ImageProcessor.cpp.o" "gcc" "CMakeFiles/RobotControl.dir/src/ImageProcessor.cpp.o.d"
   "/home/hat082/cpp_projects/pid_improved/src/PIDController.cpp" "CMakeFiles/RobotControl.dir/src/PIDController.cpp.o" "gcc" "CMakeFiles/RobotControl.dir/src/PIDController.cpp.o.d"
   "/home/hat082/cpp_projects/pid_improved/src/RobotSystem.cpp" "CMakeFiles/RobotControl.dir/src/RobotSystem.cpp.o" "gcc" "CMakeFiles/RobotControl.dir/src/RobotSystem.cpp.o.d"

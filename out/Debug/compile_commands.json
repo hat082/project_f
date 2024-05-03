@@ -11,6 +11,11 @@
 },
 {
   "directory": "/home/hat082/cpp_projects/pid_improved/out/Debug",
+  "command": "/usr/bin/c++  -I/home/hat082/cpp_projects/pid_improved/include -isystem /usr/local/include/opencv4 -g -std=gnu++11 -o CMakeFiles/RobotControl.dir/src/HMI.cpp.o -c /home/hat082/cpp_projects/pid_improved/src/HMI.cpp",
+  "file": "/home/hat082/cpp_projects/pid_improved/src/HMI.cpp"
+},
+{
+  "directory": "/home/hat082/cpp_projects/pid_improved/out/Debug",
   "command": "/usr/bin/c++  -I/home/hat082/cpp_projects/pid_improved/include -isystem /usr/local/include/opencv4 -g -std=gnu++11 -o CMakeFiles/RobotControl.dir/src/ImageProcessor.cpp.o -c /home/hat082/cpp_projects/pid_improved/src/ImageProcessor.cpp",
   "file": "/home/hat082/cpp_projects/pid_improved/src/ImageProcessor.cpp"
 },
