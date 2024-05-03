@@ -42,37 +42,6 @@ void ImageProcessor::loadTemplates(std::vector<cv::Mat> &templates) {
   }
 }
 
-// Function to perform preprocessing steps
-// This function takes a frame of the video as input, performs preprocessing
-// steps, and returns a binary mask of the region of interest (black -> white,
-// other colors -> black)
-void preprocessFrame(const cv::Mat &inputFrame, cv::Mat &outputFrame) {
-  // convert input frame to HSV color space
-  cv::Mat frame_hsv;
-  // print input frame channel
-  cvtColor(inputFrame, frame_hsv, cv::COLOR_BGR2HSV);
-  // imshow("hsv", frame_hsv);
-
-  // Smooth the image to reduce noise
-  int blurSize = 17; // Adjust the size of the blur kernel
-  GaussianBlur(frame_hsv, frame_hsv, cv::Size(blurSize, blurSize), 0);
-
-  // Filter out the colors that are not in the range of HSV values of interest
-  cv::Mat mask;
-
-  // Apply morphological operations to remove small noise and fill in gaps in
-  // the mask
-  int dilationSize = 12; // Adjust the size of the dilation kernel
-  cv::Mat kernel = getStructuringElement(cv::MORPH_RECT,
-                                         cv::Size(dilationSize, dilationSize));
-  dilate(mask, mask, kernel, cv::Point(-1, -1), 1);
-  erode(mask, outputFrame, kernel, cv::Point(-1, -1), 1);
-  // imshow("processed_frame", outputFrame);
-  if (cv::waitKey(1) == 'q') {
-    return;
-  }
-}
-
 std::pair<cv::Scalar, cv::Scalar>
 ImageProcessor::getRangeFromColor(ImageProcessor::Color color) {
   switch (color) {
@@ -111,19 +80,24 @@ ImageProcessor::getRangeFromColor(ImageProcessor::Color color) {
   }
 }
 
+// Function to perform preprocessing steps
+// This function takes a frame of the video as input, performs preprocessing
+// steps, and returns a binary mask of the region of interest (black -> white,
+// other colors -> black)
 void ImageProcessor::createMask(const cv::Mat &inputFrame, Color color,
                                 cv::Mat &outputMask) {
   std::pair<cv::Scalar, cv::Scalar> range = getRangeFromColor(color);
   cv::Mat hsv_frame;
   cv::cvtColor(inputFrame, hsv_frame, cv::COLOR_BGR2HSV);
-  cv::inRange(hsv_frame, range.first, range.second, outputMask);
-
-  // Smooth the image to reduce noise
-  int blurSize = 17; // Adjust the size of the blur kernel
-  GaussianBlur(hsv_frame, hsv_frame, cv::Size(blurSize, blurSize), 0);
 
   // Filter out the colors that are not in the range of HSV values of interest
   cv::Mat mask;
+
+  cv::inRange(hsv_frame, range.first, range.second, mask);
+
+  // Smooth the image to reduce noise
+  int blurSize = 17; // Adjust the size of the blur kernel
+  GaussianBlur(mask, mask, cv::Size(blurSize, blurSize), 0);
 
   // Apply morphological operations to remove small noise and fill in gaps in
   // the mask
@@ -181,7 +155,9 @@ int ImageProcessor::templateMatching(const cv::Mat &src, const cv::Mat &templ) {
   return maxVal;
 }
 
+// returns the warped version of the mask if found else return nothing 
 void ImageProcessor::warpPerspective(cv::Mat &mask, cv::Mat &warped) {
+
   // Find contours in the image
   std::vector<std::vector<cv::Point>> contours;
   cv::findContours(mask, contours, cv::RETR_EXTERNAL, cv::CHAIN_APPROX_SIMPLE);
@@ -211,7 +187,7 @@ void ImageProcessor::warpPerspective(cv::Mat &mask, cv::Mat &warped) {
     }
   } else {
     std::cout << "Did not find a quadrilateral contour." << std::endl;
-    // return -1;
+    return ;
   }
 
   // Define destination points (top-left, top-right, bottom-right, bottom-left)

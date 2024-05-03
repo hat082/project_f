@@ -15,6 +15,7 @@ int main() {
     c = getchar();
   }
 
+
   // main execution loop
   while (true) {
     // take image data

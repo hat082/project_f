@@ -6,7 +6,8 @@
 Camera::Camera() : yRatio_(1), heightRatio_(1), servoPin_(25), cameraPos_(90) {
   // Initialization code with resolution parameter
   // Open the default camera
-  if (!cap_.open(0)) {
+  // if (!cap_.open(0)) {
+  if (!cap_.open("/home/hat082/cpp_projects/pid_improved/video.mp4")) {
     // Handle the error if the camera cannot be opened
     std::cerr << "ERROR: Could not open camera" << std::endl;
     // You may want to throw an exception or handle the error as per your

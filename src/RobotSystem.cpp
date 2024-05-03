@@ -32,7 +32,6 @@ Robot::Robot() : camera_(), imageProcessor_() {
   std::cout
       << "Initialization complete. Press [Enter] to continue, [q] to quit."
       << std::endl;
-
 }
 
 // Destructor implementation
@@ -45,6 +44,7 @@ Robot::~Robot() {
 bool Robot::existPink() {
   // Implement the logic to check if pink is detected by the camera
   // Return true if pink is detected, false otherwise
+
   cv::Mat mask;
   imageProcessor_.createMask(frame_, Color::PINK, mask);
 
@@ -61,16 +61,24 @@ bool Robot::existPink() {
 void Robot::takeImage() { frame_ = camera_.captureImage(); };
 
 void Robot::templateMatch() {
-  cv::Mat mask;
-  cv::Mat warp;
   double max = -1;
   camera_.moveCamera(90);
+  bool existMatch = false;
 
   do {
+
+    cv::Mat mask;
+    cv::Mat warp;
     takeImage();
     imageProcessor_.createMask(frame_, Color::PINK, mask);
 
     imageProcessor_.warpPerspective(mask, warp);
+
+    if (warp.dims == 0) {
+      existMatch = false;
+      break;
+    }
+    existMatch = true;
 
     // loop through all templates
     for (int taskNum = 0; taskNum < 5; taskNum++) {
@@ -81,7 +89,12 @@ void Robot::templateMatch() {
         max = match;
       }
     }
+
   } while (max < 0.6);
+
+  if (existMatch == false) {
+    std::cout << "No match found" << task_ << std::endl;
+  }
 
   std::cout << "Matched template: " << task_ << std::endl;
 }
