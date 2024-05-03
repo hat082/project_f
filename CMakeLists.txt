@@ -4,6 +4,7 @@ project(RobotControl)
 # Set the C++ standard to C++11
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_BUILDTIMING ON)
 
 # Find required packages
 find_package(OpenCV REQUIRED)
