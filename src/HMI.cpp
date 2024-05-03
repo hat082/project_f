@@ -1,6 +1,5 @@
 #include <HMI.h>
-#include <sys/time.h>
-#include <time.h>
+
 #include <wiringPi.h>
 
 HMI::HMI() {
@@ -8,42 +7,44 @@ HMI::HMI() {
   lcdPosition(lcd_, 0, 0);
 }
 
-// lcdClear(lcd);
-// lcdPosition(lcd, 0, 0);
-// lcdPuts(lcd, "Recognising");
-//  lcdPrintf(lcd, "2 ");
-
-float getDistance() {
-  struct timeval echoBegin, echoEnd;
-  long durationMicros;
-  float distance;
-
-  // Trigger the sensor by setting the trigger pin high for 10 microseconds
-  digitalWrite(USS_TRIG, HIGH);
-  delayMicroseconds(10);
-  digitalWrite(USS_TRIG, LOW);
-
-  // Wait for the echo pin to go high, indicating the start of the echo
-  while (digitalRead(USS_ECHO) == LOW)
-    ;
-
-  // Record the start time of the echo
-  gettimeofday(&echoBegin, NULL);
-
-  // Wait for the echo pin to go low, indicating the end of the echo
-  while (digitalRead(USS_ECHO) == HIGH)
-    ;
-
-  // Record the end time of the echo
-  gettimeofday(&echoEnd, NULL);
-
-  // Calculate the duration of the echo in microseconds
-  durationMicros = (echoEnd.tv_sec - echoBegin.tv_sec) * 1000000L +
-                   (echoEnd.tv_usec - echoBegin.tv_usec);
-
-  // Calculate the distance using the speed of sound and the duration of the
-  // echo
-  distance = ((float)durationMicros / 2) / 29.1f;
-
-  return distance;
+void HMI::lcdPrintTask(const std::string& message) {
+  lcdClear(lcd_);
+  lcdPosition(lcd_, 0, 0);
+  lcdPrintf(lcd_, "Task: %s", message.c_str());
 }
+
+void HMI::lcdPrintTaskShape(int t_count, int s_count, int c_count) {
+  lcdClear(lcd_);
+  lcdPosition(lcd_, 0, 0);
+  lcdPuts(lcd_, "Task: Count Shape");
+  lcdPosition(lcd_, 0, 1);
+  lcdPrintf(lcd_, "T: %d S: %d C: %d", t_count, s_count, c_count);
+}
+
+void HMI::lcdPrintTaskApproach(int distance) {
+  lcdClear(lcd_);
+  lcdPosition(lcd_, 0, 0);
+  lcdPuts(lcd_, "Task: Approach");
+  lcdPosition(lcd_, 0, 1);
+  lcdPrintf(lcd_, "D: %d", distance);
+}
+
+// void lcdPrintf(const std::string &format, ...) {
+//   va_list args;
+//   va_start(args, format);
+//   // Code to print formatted message on the LCD using args
+//   va_end(args);
+// }
+//
+// template <typename... Args>
+// void lcdPrintTask(const std::string &taskName, const Args &...args) {
+//   lcdClear();
+//   lcdPosition(0, 0);
+//   lcdPuts(taskName);
+//
+//   if constexpr (sizeof...(args) > 0) {
+//     lcdPosition(0, 1);
+//     lcdPrintf(formatString(taskName, args...), args...);
+//   }
+// }
+

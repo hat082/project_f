@@ -1,4 +1,5 @@
 #include <lcd.h>
+#include <string>
 
 #define rs 29
 #define e 28
@@ -7,12 +8,17 @@
 #define d6 23
 #define d7 22
 
-#define USS_TRIG 4
-#define USS_ECHO 5
-
 class HMI {
-  HMI();
+
 public:
+  HMI();
+
+  // lcd print task for count shapes
+  void lcdPrintTaskShape(int t_count, int s_count, int c_count);
+
+  void lcdPrintTaskApproach(int distance);
+
+  void lcdPrintTask(const std::string &message);
 
 private:
   int lcd_;
