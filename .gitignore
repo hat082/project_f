@@ -1,0 +1,115 @@
+## CMake generated files
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+Makefile.cmake
+CMakeDirectoryInformation.cmake
+CMakeOutput.log
+CMakeTmp/
+progress.marks
+
+.cache/
+
+# Compiled binary files
+a.out
+
+# Compiled object files
+*.o
+*.obj
+
+# Compiled dependency files
+*.d
+
+# Compiled dependency files for CMake
+DependInfo.cmake
+
+# Compiled binary files from a build in a source directory
+*.exe
+*.exe~
+
+# Compiled binary files from a build in a source directory, on Windows
+*.dll
+*.dll~
+*.pdb
+*.manifest
+
+# Compiled binary files from a build in a source directory, on Mac
+*.dylib
+*.dylib~
+
+# Compiled binary files from a build in a source directory, on Mac with debug symbols
+*.dSYM
+
+# Compiled binary files from a build in a source directory, on Windows with debug symbols
+*.pdb
+
+# Other files that should not be tracked
+*.log
+*.tmp
+*.temp
+*.swp
+*.bak
+*.orig
+
+# JSON Compilation database
+compile_commands.json
+
+# Other hidden or backup files
+.*~ CMake generated files
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+Makefile.cmake
+CMakeDirectoryInformation.cmake
+CMakeOutput.log
+CMakeTmp/
+progress.marks
+
+# Compiled binary files
+a.out
+
+# Compiled object files
+*.o
+*.obj
+
+# Compiled dependency files
+*.d
+
+# Compiled dependency files for CMake
+DependInfo.cmake
+
+# Compiled binary files from a build in a source directory
+*.exe
+*.exe~
+
+# Compiled binary files from a build in a source directory, on Windows
+*.dll
+*.dll~
+*.pdb
+*.manifest
+
+# Compiled binary files from a build in a source directory, on Mac
+*.dylib
+*.dylib~
+
+# Compiled binary files from a build in a source directory, on Mac with debug symbols
+*.dSYM
+
+# Compiled binary files from a build in a source directory, on Windows with debug symbols
+*.pdb
+
+# Other files that should not be tracked
+*.log
+*.tmp
+*.temp
+*.swp
+*.bak
+*.orig
+
+# JSON Compilation database
+compile_commands.json
+
+# Other hidden or backup files
+.*~
