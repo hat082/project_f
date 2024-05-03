@@ -10,6 +10,7 @@
 #include "TaskExecutor.h"
 #include "TemplateMatcher.h"
 #include "UltrasonicSensor.h"
+#include <HMI.h>
 
 class Robot {
 public:
@@ -25,6 +26,8 @@ private:
   TaskExecutor taskExecutor_;
   // TemplateMatcher templateMatcher_;
   // UltrasonicSensor ultrasonicSensor_;
+  //
+  HMI hmi_;
 
 private:
   cv::Mat frame_;

@@ -24,11 +24,17 @@ private:
   const cv::Scalar upper_black_ = cv::Scalar(89, 135, 85);
 
 public:
-  bool detectContours(const cv::Mat &inputFrame,
-                      std::vector<cv::Point> &largestContour);
-
+  // Function to perform preprocessing steps
+  // This function takes a frame of the video as input, performs preprocessing
+  // steps, and returns a binary mask of the region of interest (black -> white,
+  // other colors -> black)
   void createMask(const cv::Mat &inputFrame, Color color, cv::Mat &outputMask);
 
+  /* map color enum to their corresponding scalar ranges so that they can be
+   * accessed more easily usage: auto range = getRangeFromColor(Color color);
+   *  range.first->lower bound
+   *  range.second->upper bound
+   */
   std::pair<cv::Scalar, cv::Scalar>
   getRangeFromColor(ImageProcessor::Color color);
 
@@ -62,7 +68,11 @@ public:
    */
   int templateMatching(const cv::Mat &src, const cv::Mat &templ);
 
+  // returns the warped version of the mask if found else return nothing
   void warpPerspective(cv::Mat &mask, cv::Mat &warped);
 
   void loadTemplates(std::vector<cv::Mat> &templates);
+
+  // usage: auto [triangles, circles, rectangles] = countShapes(frame);
+  std::tuple<int, int, int> countShapes(cv::Mat &frame);
 };
