@@ -1,5 +1,14 @@
+
+#define TRIG 4
+#define ECHO 5
+#define RED_LED 27
+#define BLUE_LED 26
+#define TIMEOUT_MICROS 30000L  // 30 milliseconds timeout
+#define DEFAULT_DISTANCE 50.0f // Default distance in meters
+
 class TaskExecutor {
 public:
+  TaskExecutor();
   enum Task {
     SHAPES1,
     SHAPES2,
@@ -17,16 +26,19 @@ public:
   };
 
 public:
-  void countShapes();
   void blinkLED();
 
   void playMusic();
   void alarmFlash();
 
   // ultrasonic sensor
-  void approachAndStop();
+  float calcDistance();
   // kick ball
   void kickBall();
   // red stop green move
   void trafficLight();
+  // var is the variable that holds the current task
+  void setTask(Task &var, int num);
 };
+
+float getDistance();
