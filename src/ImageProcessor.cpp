@@ -80,13 +80,9 @@ ImageProcessor::getRangeFromColor(ImageProcessor::Color color) {
   }
 }
 
-// Function to perform preprocessing steps
-// This function takes a frame of the video as input, performs preprocessing
-// steps, and returns a binary mask of the region of interest (black -> white,
-// other colors -> black)
 void ImageProcessor::createMask(const cv::Mat &inputFrame, Color color,
                                 cv::Mat &outputMask) {
-  std::pair<cv::Scalar, cv::Scalar> range = getRangeFromColor(color);
+  auto range = getRangeFromColor(color);
   cv::Mat hsv_frame;
   cv::cvtColor(inputFrame, hsv_frame, cv::COLOR_BGR2HSV);
 
@@ -155,7 +151,6 @@ int ImageProcessor::templateMatching(const cv::Mat &src, const cv::Mat &templ) {
   return maxVal;
 }
 
-// returns the warped version of the mask if found else return nothing 
 void ImageProcessor::warpPerspective(cv::Mat &mask, cv::Mat &warped) {
 
   // Find contours in the image
@@ -187,7 +182,7 @@ void ImageProcessor::warpPerspective(cv::Mat &mask, cv::Mat &warped) {
     }
   } else {
     std::cout << "Did not find a quadrilateral contour." << std::endl;
-    return ;
+    return;
   }
 
   // Define destination points (top-left, top-right, bottom-right, bottom-left)
@@ -212,5 +207,75 @@ void ImageProcessor::warpPerspective(cv::Mat &mask, cv::Mat &warped) {
   cv::warpPerspective(mask, warped, perspectiveMatrix, mask.size());
 }
 
-// ImageProcessor();
-// enum Colors targetColor_;
+std::tuple<int, int, int> ImageProcessor::countShapes(cv::Mat &frame) {
+
+  auto start = std::chrono::steady_clock::now();
+  int timeout = 100; // Timeout duration in seconds
+
+  int threshold_value = 128;    // Threshold value for binary image
+  double epsilon_factor = 0.03; // Approximation accuracy for contours
+  int min_contour_area = 200;   // Minimum contour area to consider as a shape
+
+  int t = 0; // Count for triangles
+  int c = 0; // Count for circles
+  int r = 0; // Count for rectangles
+
+  // while seconds past is not over the timeout threshold
+  // find and increment the count of each shape
+  while (std::chrono::duration_cast<std::chrono::seconds>(
+             std::chrono::steady_clock::now() - start)
+             .count() < timeout) {
+
+    if (frame.empty()) {
+      std::cout << "Input frame invalid\n";
+      break;
+    }
+
+    cv::Mat mask;
+    // create a mask to extract the pink color
+    createMask(frame, PINK, mask);
+
+    // Find contours in the binary image
+    std::vector<std::vector<cv::Point>> contours;
+    std::vector<cv::Vec4i> hierarchy;
+    findContours(mask, contours, hierarchy, cv::RETR_TREE,
+                 cv::CHAIN_APPROX_SIMPLE);
+
+    // Iterate through each contour
+    for (size_t i = 0; i < contours.size(); i++) {
+      // Calculate the area of the contour
+      double area = contourArea(contours[i]);
+
+      // If the contour area is above a certain threshold
+      if (area > min_contour_area) {
+        std::vector<cv::Point> approx;
+        // Obtain a sequence of points of contour
+        approxPolyDP(contours[i], approx,
+                     arcLength(contours[i], true) * epsilon_factor, true);
+
+        // If there are 3 vertices, it's a triangle
+        if (approx.size() == 3) {
+          t++; // Increment triangle count
+        }
+        // If there are 4 vertices, it's a quadrilateral
+        else if (approx.size() == 4) {
+          r++; // Increment rectangle count
+        }
+        // If there are more than 6 vertices, consider it a circle
+        else if (approx.size() > 6) {
+          c++; // Increment circle count
+        }
+      }
+    }
+
+    // remove the the outmost square (which is the border of the image)
+    --r;
+
+    // Display the count of each pattern
+    std::cout << "Number of triangles: " << t << std::endl;
+    std::cout << "Number of rectangles: " << r << std::endl;
+    std::cout << "Number of circles: " << c << std::endl;
+  }
+
+  return std::make_tuple(t, r, c);
+}

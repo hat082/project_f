@@ -3,30 +3,15 @@
 #include <iostream>
 #include <opencv2/core.hpp>
 #include <opencv2/imgcodecs.hpp>
-
-// bool Robot::init() {
-// Initialize all the components of the robot system
-// Return true if initialization is successful, false otherwise
-// camera_.initialize();
-// gpio_.initialize();
-// imageProcessor_.initialize();
-// pidController_.initialize();
-// serialCommunicator_.initialize();
-// taskExecutor_.initialize();
-// templateMatcher_.initialize();
-// ultrasonicSensor_.initialize();
-
-//   return true;
-// }
+#include <wiringPi.h>
 
 using Task = TaskExecutor::Task;
 using Color = ImageProcessor::Color;
 
 // Constructor implementation
-Robot::Robot() : camera_(), imageProcessor_() {
+Robot::Robot() : camera_(), imageProcessor_(), hmi_() {
   // Additional initialization for Robot if needed
   // Initialize all the class members here
-
   task_ = Task::NONE;
   imageProcessor_.loadTemplates(templs_);
   std::cout
@@ -81,12 +66,13 @@ void Robot::templateMatch() {
     existMatch = true;
 
     // loop through all templates
-    for (int taskNum = 0; taskNum < 5; taskNum++) {
+    for (int taskNum = 0; taskNum < Task::NONE; taskNum++) {
       // obtain the maximum match value from template matching
       double match =
           imageProcessor_.templateMatching(warp, templs_.at(taskNum));
       if (match > max) {
         max = match;
+        taskExecutor_.setTask(task_, taskNum);
       }
     }
 
@@ -102,16 +88,54 @@ void Robot::templateMatch() {
 void Robot::performTask() {
   std::cout << "Performing task: " << task_ << std::endl;
   switch (task_) {
-  case Task::LED_BLINK:
+    // led blink (alarm flash)
+  case Task::LED_BLINK: {
     taskExecutor_.blinkLED();
-    break;
-    // case :
+    hmi_.lcdPrintTask("Alarm Flash");
+  } break;
+
+    // count shapes
+  case Task::SHAPES1:
+  case Task::SHAPES2:
+  case Task::SHAPES3: {
+    auto [t_count, s_count, c_count] = imageProcessor_.countShapes(frame_);
+    hmi_.lcdPrintTaskShape(t_count, s_count, c_count);
+  } break;
+
+    // play music
+  case Task::MUSIC: {
+    taskExecutor_.playMusic();
+    hmi_.lcdPrintTask("Music");
+  } break;
+
+  // approach and stop
+  case Task::APPROACH_AND_STOP: {
+    float distance = 50;
+    while (distance > 5) {
+      taskExecutor_.calcDistance();
+      hmi_.lcdPrintTaskApproach(distance);
+    }
+  } break;
+
+  // kick ball
+  case Task::KICK_FOOTBALL: {
+    taskExecutor_.kickBall();
+    hmi_.lcdPrintTask("Kick Football");
+  } break;
+
+  // traffic light
+  case Task::TRAFFIC_LIGHTS: {
+    taskExecutor_.trafficLight();
+    hmi_.lcdPrintTask("Traffic Light");
+  } break;
+
   default:
     break;
   }
   task_ = Task::NONE;
 }
 
+// TODO: finish logic for pid
 void Robot::pidControl(Color color) {
   cv::Mat mask;
   // create a mask that extracts black color
