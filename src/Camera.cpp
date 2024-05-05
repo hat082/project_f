@@ -3,7 +3,7 @@
 #include <softPwm.h>
 #include <wiringPi.h>
 
-Camera::Camera() : yRatio_(1), heightRatio_(1), servoPin_(25), cameraPos_(90) {
+Camera::Camera() : yRatio_(1), heightRatio_(1), cameraPos_(90) {
   // Initialization code with resolution parameter
   // Open the default camera
   // if (!cap_.open(0)) {
@@ -13,6 +13,10 @@ Camera::Camera() : yRatio_(1), heightRatio_(1), servoPin_(25), cameraPos_(90) {
     // You may want to throw an exception or handle the error as per your
     // application's needs
   }
+  wiringPiSetup();
+
+  pinMode(SERVO, PWM_OUTPUT);
+  softPwmCreate(SERVO, 0, 100);
 }
 
 // Destructor to release the camera
@@ -45,12 +49,12 @@ void Camera::moveCamera(int angle) {
   if (cameraPos_ == angle)
     return;
   else if (cameraPos_ == 0)
-    softPwmWrite(servoPin_, 23);
+    softPwmWrite(SERVO, 23);
   else if (cameraPos_ == 90)
-    softPwmWrite(servoPin_, 15);
+    softPwmWrite(SERVO, 15);
   delay(500);
   // turn off the servo motor so it doesn't shake
-  softPwmWrite(servoPin_, 0);
+  softPwmWrite(SERVO, 0);
 }
 
 int capture_15_secs() {
@@ -111,4 +115,3 @@ int capture_15_secs() {
 
   return 0;
 }
-

@@ -4,7 +4,7 @@
 #define rs 29
 #define e 28
 #define d4 25
-#define d5 4
+#define d5 24
 #define d6 23
 #define d7 22
 
